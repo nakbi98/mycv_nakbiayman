@@ -1,5 +1,4 @@
-/* eslint-disable */
-import { pinkThemegirl } from '../theme/images'
+
 import { 
     yellowThemeDark
 } from '../theme/theme'

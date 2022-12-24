@@ -1,11 +1,11 @@
 import React, { useContext, useState } from 'react';
 import { Snackbar, IconButton, SnackbarContent } from '@material-ui/core';
 import CloseIcon from '@material-ui/icons/Close';
-import axios from 'axios';
+
 import isEmail from 'validator/lib/isEmail';
 import { makeStyles } from '@material-ui/core/styles';
 import {
-    FaTwitter,
+    
     FaLinkedinIn,
     FaGithub,
     FaMediumM,
@@ -32,7 +32,7 @@ function Contacts() {
 
     const { theme } = useContext(ThemeContext);
 
-    const handleClose = (event, reason) => {
+    const handleClose = ( reason) => {
         if (reason === 'clickaway') {
             return;
         }
@@ -127,13 +127,9 @@ function Contacts() {
 
         if (name && email && message) {
             if (isEmail(email)) {
-                const responseData = {
-                    name: name,
-                    email: email,
-                    message: message,
-                };
+            
 
-                axios.post(contactsData.sheetAPI, responseData).then((res) => {
+              
                     console.log('success');
                     setSuccess(true);
                     setErrMsg('');
@@ -142,7 +138,7 @@ function Contacts() {
                     setEmail('');
                     setMessage('');
                     setOpen(false);
-                });
+                
             } else {
                 setErrMsg('Invalid email');
                 setOpen(true);
@@ -169,7 +165,7 @@ function Contacts() {
                                     Name
                                 </label>
                                 <input
-                                    placeholder='Devesh Verma'
+                                    placeholder='name'
                                     value={name}
                                     onChange={(e) => setName(e.target.value)}
                                     type='text'
@@ -306,16 +302,7 @@ function Contacts() {
                         </div>
 
                         <div className='socialmedia-icons'>
-                            {socialsData.twitter && (
-                                <a
-                                    href={socialsData.twitter}
-                                    target='_blank'
-                                    rel='noreferrer'
-                                    className={classes.socialIcon}
-                                >
-                                    <FaTwitter aria-label='Twitter' />
-                                </a>
-                            )}
+                           
                             {socialsData.github && (
                                 <a
                                     href={socialsData.github}
