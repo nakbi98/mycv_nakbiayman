@@ -231,7 +231,7 @@ function Navbar() {
 
                         <Fade left>
                             <NavLink
-                                to='/#skill'
+                                to='/#skills'
                                 smooth={true}
                                 spy='true'
                                 duration={2000}
@@ -249,7 +249,7 @@ function Navbar() {
 
                         <Fade left>
                             <NavLink
-                                to='/#Services'
+                                to='/#services'
                                 smooth={true}
                                 spy='true'
                                 duration={2000}
